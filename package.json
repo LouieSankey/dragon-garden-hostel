@@ -1,0 +1,10 @@
+{
+  "name": "dragon-cowork-landing",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "browser-sync start --server --files '*.html,*.css,*.js' --port 3000"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.29.3"
+  }
+} 

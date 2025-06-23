@@ -146,7 +146,7 @@ body {
 
 /* Location Section */
 .location {
-    padding: 80px 0;
+    padding: 80px 20px;
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
 }
 
@@ -395,7 +395,7 @@ footer p {
 
 /* Progress Section */
 .progress {
-    padding: 80px 0;
+    padding: 80px 20px;
     background: white;
 }
 
@@ -673,6 +673,11 @@ footer p {
         hyphens: none;
         word-wrap: normal;
     }
+    
+    .progress,
+    .location {
+        padding: 60px 15px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -709,6 +714,11 @@ footer p {
     
     .progress h2 {
         font-size: 1.5rem !important;
+    }
+    
+    .progress,
+    .location {
+        padding: 50px 10px;
     }
 }
 

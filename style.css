@@ -250,7 +250,7 @@ body {
 
 /* Interest Form with Background Image */
 .interest-form {
-    padding: 80px 0;
+    padding: 80px 20px;
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/tropical-beach.jpg');
     background-size: cover;
     background-position: center;
@@ -574,8 +574,8 @@ footer p {
         border-radius: 15px;
     }
     
-    .interest-form .container {
-        padding: 0 15px;
+    .interest-form {
+        padding: 60px 15px;
     }
     
     .features-grid {
@@ -661,8 +661,7 @@ footer p {
     }
     
     .progress h2 {
-        font-size: 2rem;
-        padding: 0 15px;
+        font-size: 1.8rem !important;
     }
     
     .container {
@@ -682,8 +681,8 @@ footer p {
         padding: 25px 10px;
     }
     
-    .interest-form .container {
-        padding: 0 10px;
+    .interest-form {
+        padding: 50px 10px;
     }
     
     .featured-photos {
@@ -709,9 +708,7 @@ footer p {
     }
     
     .progress h2 {
-        font-size: 1.7rem !important;
-        hyphens: none;
-        word-wrap: normal;
+        font-size: 1.5rem !important;
     }
 }
 

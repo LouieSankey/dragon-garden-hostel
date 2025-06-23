@@ -575,7 +575,7 @@ footer p {
     }
     
     .interest-form .container {
-        padding: 0 10px;
+        padding: 0 15px;
     }
     
     .features-grid {
@@ -664,6 +664,16 @@ footer p {
         font-size: 2rem;
         padding: 0 15px;
     }
+    
+    .container {
+        padding: 0;
+    }
+    
+    h2 {
+        font-size: 2rem !important;
+        hyphens: none;
+        word-wrap: normal;
+    }
 }
 
 @media (max-width: 480px) {
@@ -673,7 +683,7 @@ footer p {
     }
     
     .interest-form .container {
-        padding: 0 5px;
+        padding: 0 10px;
     }
     
     .featured-photos {
@@ -699,9 +709,9 @@ footer p {
     }
     
     .progress h2 {
-        font-size: 1.6rem;
-        padding: 0 10px;
-        line-height: 1.3;
+        font-size: 1.7rem !important;
+        hyphens: none;
+        word-wrap: normal;
     }
 }
 

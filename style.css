@@ -301,6 +301,22 @@ body {
     font-size: 0.9rem;
 }
 
+/* Redemption Note Styling */
+.redemption-note {
+    text-align: center;
+    margin-top: 15px;
+    padding: 8px 12px;
+    background: #f8f9fa;
+    border-radius: 6px;
+}
+
+.redemption-note p {
+    color: #6b7280;
+    font-size: 0.85rem;
+    font-weight: 400;
+    margin: 0;
+}
+
 /* Form Section Styling */
 .form-section {
     margin-bottom: 40px;
@@ -532,6 +548,21 @@ body {
     margin-top: 20px;
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.button-main {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.button-note {
+    font-size: 0.75rem;
+    font-weight: 400;
+    opacity: 0.9;
+    line-height: 1.2;
 }
 
 .validation-form button:hover {
@@ -613,6 +644,10 @@ body {
     cursor: pointer;
     margin: 0;
     line-height: 1.4;
+}
+
+.stay-updated-wrapper + .stay-updated-wrapper {
+    margin-top: 15px;
 }
 
 /* Form Row Enhancements */

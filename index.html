@@ -128,35 +128,41 @@
         <section class="interest-form" id="waitlist">
             <div class="container">
                 <h2>Join the Waitlist</h2>
-                <p>Help us make Saipan's first digital nomad hostel the best it can be. Join our waitlist and we'll email you a voucher for 1 week free when we open!</p>
+                <p>Help us make Saipan's first digital nomad hostel the best it can be. Join our waitlist and we'll email you a voucher for 3 nights free when we open!</p>
                 <form class="validation-form">
-                  
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label>Your name <span class="required">*</span></label>
-                            <input type="text" name="name" placeholder="Enter your name">
-                        </div>
-                        <div class="form-group">
-                            <label>Email address <span class="required">*</span></label>
-                            <input type="email" name="email" placeholder="Enter your email" required>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>What has you interested in Saipan? <span class="required">*</span></label>
-                        <select name="purpose" required>
-                            <option value="">Select your primary purpose</option>
-                            <option value="remote-work">Remote work retreat</option>
-                            <option value="digital-nomad">Digital nomad lifestyle</option>
-                            <option value="workation">Workation/vacation combo</option>
-                            <option value="team-retreat">Team retreat</option>
-                            <option value="other">Other</option>
-                        </select>
+                    <div class="privacy-note">
+                        <small>🔒 We'll never share your information. Unsubscribe anytime.</small>
                     </div>
 
-                    <div class="form-row">
+                    <!-- Section 1: Essential Info -->
+                    <div class="form-section">
+                        <h3 class="section-title">Essential Info</h3>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Email address <span class="required">*</span></label>
+                                <input type="email" name="email" placeholder="Enter your email" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Your name</label>
+                                <input type="text" name="name" placeholder="Enter your name (optional)">
+                            </div>
+                        </div>
+                        
                         <div class="form-group">
-                            <label>Ideal stay duration? <span class="required">*</span></label>
+                            <label>What brings you to Saipan? <span class="required">*</span></label>
+                            <select name="purpose" required>
+                                <option value="">Select your primary reason</option>
+                                <option value="remote-work">Remote work retreat</option>
+                                <option value="digital-nomad">Digital nomad lifestyle</option>
+                                <option value="workation">Workation/vacation combo</option>
+                                <option value="team-retreat">Team retreat</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>How long would you stay? <span class="required">*</span></label>
                             <select name="duration" required>
                                 <option value="">Select duration</option>
                                 <option value="1-3-days">1-3 days</option>
@@ -166,71 +172,78 @@
                                 <option value="longer">3+ months</option>
                             </select>
                         </div>
+                    </div>
+
+                    <!-- Section 2: Optional Details -->
+                    <div class="form-section optional-section">
+                        <h3 class="section-title">Help Us Customize Your Experience <span class="optional-badge">Optional</span></h3>
+                        <p class="section-subtitle">The more you tell us, the better we can tailor Dragon Garden Hostel to your needs.</p>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>When would you visit?</label>
+                                <select name="timeline">
+                                    <option value="">Select timeframe</option>
+                                    <option value="asap">As soon as possible</option>
+                                    <option value="3-months">Next 3 months</option>
+                                    <option value="6-months">Next 6 months</option>
+                                    <option value="year">Within a year</option>
+                                    <option value="flexible">Flexible</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Daily budget range?</label>
+                                <select name="priorities">
+                                    <option value="">Select your preference</option>
+                                    <option value="budget-basic">Budget-friendly (~$15/day)</option>
+                                    <option value="comfort-community">Comfort + community (~$25/day)</option>
+                                    <option value="premium-amenities">Premium amenities (~$35/day)</option>
+                                    <option value="luxury-experience">Full experience (~$50+/day)</option>
+                                </select>
+                            </div>
+                        </div>
+
                         <div class="form-group">
-                            <label>When would you visit? <span class="required">*</span></label>
-                            <select name="timeline" required>
-                                <option value="">Select timeframe</option>
-                                <option value="asap">As soon as possible</option>
-                                <option value="3-months">Next 3 months</option>
-                                <option value="6-months">Next 6 months</option>
-                                <option value="year">Within a year</option>
-                                <option value="flexible">Flexible</option>
-                            </select>
+                            <label>What excites you most? (Select your top 3)</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="features" value="fast-internet">
+                                    <span>High-speed internet</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="features" value="ebikes">
+                                    <span>E-bike rentals</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="features" value="smoothie-bar">
+                                    <span>Fresh juice/smoothie bar</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="features" value="beach-access">
+                                    <span>Beach proximity</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="features" value="location">
+                                    <span>Convenient location</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="features" value="community">
+                                    <span>Co-working community</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Anything else?</label>
+                            <textarea name="additional" placeholder="Special requests, questions, or ideas for Dragon Garden..." rows="3"></textarea>
                         </div>
                     </div>
-
-             
-
-                    <div class="form-group">
-                        <label>What matters most to you in accommodation? <span class="required">*</span></label>
-                        <select name="priorities" required>
-                            <option value="">Select your priority</option>
-                            <option value="budget-basic">Budget-friendly basics (~$15/day)</option>
-                            <option value="comfort-community">Comfort + community (~$25/day)</option>
-                            <option value="premium-amenities">Premium amenities (~$35/day)</option>
-                            <option value="luxury-experience">Full experience (~$50+/day)</option>
-                        </select>
-                    </div>
-
-                  
-
-                    <div class="form-group">
-                        <label>What excites you most? (Select top 3) <span class="required">*</span></label>
-                        <div class="checkbox-group">
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="features" value="fast-internet">
-                                <span>High-speed internet</span>
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="features" value="ebikes">
-                                <span>E-bike rentals</span>
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="features" value="smoothie-bar">
-                                <span>Fresh juice/smoothie bar</span>
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="features" value="beach-access">
-                                <span>Beach proximity</span>
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="features" value="location">
-                                <span>Convenient location</span>
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="features" value="community">
-                                <span>Co-working community</span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <textarea name="additional" placeholder="Anything else you'd love to see? Special requests or questions?" rows="3"></textarea>
                     
                     <div class="form-group">
-                        <label class="checkbox-label ">
-                            <input type="checkbox" name="stay_updated" value="yes" checked>
-                            <span>Keep me updated (we won't spam you)</span>
-                        </label>
+                        <div class="stay-updated-wrapper">
+                            <input type="checkbox" id="stay_updated" name="stay_updated" value="yes" checked>
+                            <label for="stay_updated">Keep me updated (we won't spam you)</label>
+                        </div>
                     </div>
                     
                     <button type="submit">Join the Waitlist 🌴</button>
@@ -287,7 +300,7 @@
             <div class="container">
                 <h2>Ready to Make Saipan Your Base?</h2>
                 <p>Be among the first to experience our digital nomad hostel and receive 3 complimentary nights when we launch. Your input helps us create the perfect island workspace.</p>
-                <a href="#waitlist" class="cta-button">Join the Waitlist 🌴</a>
+                <a href="#waitlist" class="cta-button">Join the Waitlist ��</a>
             </div>
         </section>
 
@@ -298,5 +311,245 @@
             <p>&copy; 2024 Dragon Garden Hostel, Saipan. Your peaceful digital nomad retreat from the bustle.</p>
         </div>
     </footer>
+
+    <script>
+        // Enhanced Form Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('.validation-form');
+            const submitButton = form.querySelector('button[type="submit"]');
+            const requiredFields = form.querySelectorAll('[required]');
+            
+            // Add progress bar
+            const progressBar = document.createElement('div');
+            progressBar.className = 'form-progress';
+            form.appendChild(progressBar);
+            
+            // Form validation functions
+            function validateEmail(email) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+            }
+            
+            function validateField(field) {
+                const fieldGroup = field.closest('.form-group');
+                const fieldValue = field.value.trim();
+                
+                // Remove existing messages
+                const existingMessage = fieldGroup.querySelector('.error-message, .success-message');
+                if (existingMessage) {
+                    existingMessage.remove();
+                }
+                
+                // Reset classes
+                fieldGroup.classList.remove('valid', 'error');
+                
+                // Check if field is required and empty
+                if (field.hasAttribute('required') && !fieldValue) {
+                    showFieldError(fieldGroup, field, 'This field is required');
+                    return false;
+                }
+                
+                // Email specific validation
+                if (field.type === 'email' && fieldValue && !validateEmail(fieldValue)) {
+                    showFieldError(fieldGroup, field, 'Please enter a valid email address');
+                    return false;
+                }
+                
+                // Select specific validation
+                if (field.tagName === 'SELECT' && field.hasAttribute('required') && !fieldValue) {
+                    showFieldError(fieldGroup, field, 'Please make a selection');
+                    return false;
+                }
+                
+                // If we get here, field is valid
+                if (fieldValue) {
+                    showFieldSuccess(fieldGroup, field);
+                    return true;
+                }
+                
+                return true;
+            }
+            
+            function showFieldError(fieldGroup, field, message) {
+                fieldGroup.classList.add('error');
+                const errorDiv = document.createElement('div');
+                errorDiv.className = 'error-message';
+                errorDiv.textContent = message;
+                field.parentNode.appendChild(errorDiv);
+                
+                // Trigger animation
+                setTimeout(() => errorDiv.classList.add('show'), 10);
+            }
+            
+            function showFieldSuccess(fieldGroup, field) {
+                fieldGroup.classList.add('valid');
+            }
+            
+            function updateProgress() {
+                const totalFields = requiredFields.length;
+                let validFields = 0;
+                
+                requiredFields.forEach(field => {
+                    if (field.closest('.form-group').classList.contains('valid') || 
+                        (field.value.trim() && field.type === 'email' ? validateEmail(field.value) : true)) {
+                        validFields++;
+                    }
+                });
+                
+                const progress = (validFields / totalFields) * 100;
+                progressBar.style.width = progress + '%';
+                
+                // Enable/disable submit button
+                if (progress === 100) {
+                    submitButton.disabled = false;
+                    submitButton.style.opacity = '1';
+                } else {
+                    submitButton.disabled = true;
+                    submitButton.style.opacity = '0.6';
+                }
+            }
+            
+            // Add real-time validation
+            requiredFields.forEach(field => {
+                // Validate on blur (when user leaves field)
+                field.addEventListener('blur', function() {
+                    validateField(this);
+                    updateProgress();
+                });
+                
+                // Update progress on input
+                field.addEventListener('input', function() {
+                    // Remove error state on typing
+                    const fieldGroup = this.closest('.form-group');
+                    if (fieldGroup.classList.contains('error')) {
+                        fieldGroup.classList.remove('error');
+                        const errorMessage = fieldGroup.querySelector('.error-message');
+                        if (errorMessage) {
+                            errorMessage.remove();
+                        }
+                    }
+                    updateProgress();
+                });
+            });
+            
+            // Handle checkbox validation
+            const checkboxGroups = form.querySelectorAll('.checkbox-group');
+            checkboxGroups.forEach(group => {
+                const checkboxes = group.querySelectorAll('input[type="checkbox"]');
+                const groupContainer = group.closest('.form-group');
+                
+                if (groupContainer.querySelector('label').textContent.includes('required')) {
+                    checkboxes.forEach(checkbox => {
+                        checkbox.addEventListener('change', function() {
+                            const checkedBoxes = group.querySelectorAll('input[type="checkbox"]:checked');
+                            if (checkedBoxes.length > 0) {
+                                groupContainer.classList.remove('error');
+                                groupContainer.classList.add('valid');
+                            } else {
+                                groupContainer.classList.remove('valid');
+                            }
+                            updateProgress();
+                        });
+                    });
+                }
+            });
+            
+            // Enhanced button interactions
+            submitButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Validate all fields
+                let isFormValid = true;
+                requiredFields.forEach(field => {
+                    if (!validateField(field)) {
+                        isFormValid = false;
+                    }
+                });
+                
+                // Check checkbox requirements
+                checkboxGroups.forEach(group => {
+                    const groupContainer = group.closest('.form-group');
+                    if (groupContainer.querySelector('label').textContent.includes('required')) {
+                        const checkedBoxes = group.querySelectorAll('input[type="checkbox"]:checked');
+                        if (checkedBoxes.length === 0) {
+                            showFieldError(groupContainer, group, 'Please select at least one option');
+                            isFormValid = false;
+                        }
+                    }
+                });
+                
+                if (isFormValid) {
+                    // Show loading state
+                    this.classList.add('loading');
+                    this.textContent = 'Submitting...';
+                    
+                    // Simulate form submission (replace with actual submission)
+                    setTimeout(() => {
+                        this.classList.remove('loading');
+                        this.textContent = 'Thank you! 🌴';
+                        this.style.background = '#48bb78';
+                        
+                        // Show success message
+                        const successDiv = document.createElement('div');
+                        successDiv.style.cssText = `
+                            background: #f0fff4;
+                            border: 2px solid #48bb78;
+                            color: #22543d;
+                            padding: 20px;
+                            border-radius: 12px;
+                            margin-top: 20px;
+                            text-align: center;
+                            font-weight: 600;
+                        `;
+                        successDiv.innerHTML = '🎉 Thank you for joining our waitlist! We\'ll keep you updated on our progress.';
+                        form.appendChild(successDiv);
+                        
+                        // Reset form after delay
+                        setTimeout(() => {
+                            form.reset();
+                            this.textContent = 'Join the Waitlist 🌴';
+                            this.style.background = '';
+                            successDiv.remove();
+                            progressBar.style.width = '0%';
+                            
+                            // Reset all field states
+                            form.querySelectorAll('.form-group').forEach(group => {
+                                group.classList.remove('valid', 'error');
+                            });
+                            form.querySelectorAll('.error-message, .success-message').forEach(msg => {
+                                msg.remove();
+                            });
+                            
+                            updateProgress();
+                        }, 3000);
+                        
+                    }, 2000);
+                } else {
+                    // Shake button if form is invalid
+                    this.style.animation = 'shake 0.5s ease-in-out';
+                    setTimeout(() => {
+                        this.style.animation = '';
+                    }, 500);
+                }
+            });
+            
+            // Initialize
+            updateProgress();
+            
+            // Add smooth scrolling for internal links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html> 

@@ -320,7 +320,8 @@ body {
 /* Form Section Styling */
 .form-section {
     margin-bottom: 40px;
-    padding: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
     border-radius: 15px;
     position: relative;
 }
@@ -563,6 +564,10 @@ body {
     font-weight: 400;
     opacity: 0.9;
     line-height: 1.2;
+    margin-top: 20px;
+    text-align: center;
+    display: block;
+    width: 100%;
 }
 
 .validation-form button:hover {

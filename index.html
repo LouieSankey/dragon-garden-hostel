@@ -129,7 +129,11 @@
             <div class="container">
                 <h2>Join the Waitlist</h2>
                 <p>Help us make Saipan's first digital nomad hostel the best it can be. Join our waitlist and we'll email you a voucher for 3 nights free when we open!</p>
-                <form class="validation-form">
+                <form class="validation-form" action="https://formspree.io/f/xvgrwlow" method="POST">
+                    <!-- Formspree configuration -->
+                    <input type="hidden" name="_subject" value="New Dragon Garden Hostel Waitlist Signup 🌴">
+                    <input type="hidden" name="_captcha" value="false">
+                    
                     <div class="privacy-note">
                         <small>🔒 We'll never share your information. Unsubscribe anytime.</small>
                     </div>
@@ -483,47 +487,78 @@
                     this.classList.add('loading');
                     this.textContent = 'Submitting...';
                     
-                    // Simulate form submission (replace with actual submission)
-                    setTimeout(() => {
+                    // Actually submit the form to Formspree
+                    const formData = new FormData(form);
+                    
+                    fetch(form.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    })
+                    .then(response => {
                         this.classList.remove('loading');
-                        this.textContent = 'Thank you! 🌴';
-                        this.style.background = '#48bb78';
                         
-                        // Show success message
-                        const successDiv = document.createElement('div');
-                        successDiv.style.cssText = `
-                            background: #f0fff4;
-                            border: 2px solid #48bb78;
-                            color: #22543d;
-                            padding: 20px;
-                            border-radius: 12px;
-                            margin-top: 20px;
-                            text-align: center;
-                            font-weight: 600;
-                        `;
-                        successDiv.innerHTML = '🎉 Thank you for joining our waitlist! We\'ll keep you updated on our progress.';
-                        form.appendChild(successDiv);
+                        if (response.ok) {
+                            // Success
+                            this.textContent = 'Thank you! 🌴';
+                            this.style.background = '#48bb78';
+                            
+                            // Show success message
+                            const successDiv = document.createElement('div');
+                            successDiv.style.cssText = `
+                                background: #f0fff4;
+                                border: 2px solid #48bb78;
+                                color: #22543d;
+                                padding: 20px;
+                                border-radius: 12px;
+                                margin-top: 20px;
+                                text-align: center;
+                                font-weight: 600;
+                            `;
+                            successDiv.innerHTML = '🎉 Thank you for joining our waitlist! Check your email for confirmation and we\'ll keep you updated on our progress.';
+                            form.appendChild(successDiv);
+                            
+                            // Reset form after delay
+                            setTimeout(() => {
+                                form.reset();
+                                this.textContent = 'Join the Waitlist 🌴';
+                                this.style.background = '';
+                                successDiv.remove();
+                                progressBar.style.width = '0%';
+                                
+                                // Reset all field states
+                                form.querySelectorAll('.form-group').forEach(group => {
+                                    group.classList.remove('valid', 'error');
+                                });
+                                form.querySelectorAll('.error-message, .success-message').forEach(msg => {
+                                    msg.remove();
+                                });
+                                
+                                updateProgress();
+                            }, 5000);
+                        } else {
+                            // Error
+                            this.textContent = 'Try Again';
+                            this.style.background = '#f56565';
+                            
+                            setTimeout(() => {
+                                this.textContent = 'Join the Waitlist 🌴';
+                                this.style.background = '';
+                            }, 3000);
+                        }
+                    })
+                    .catch(error => {
+                        this.classList.remove('loading');
+                        this.textContent = 'Try Again';
+                        this.style.background = '#f56565';
                         
-                        // Reset form after delay
                         setTimeout(() => {
-                            form.reset();
                             this.textContent = 'Join the Waitlist 🌴';
                             this.style.background = '';
-                            successDiv.remove();
-                            progressBar.style.width = '0%';
-                            
-                            // Reset all field states
-                            form.querySelectorAll('.form-group').forEach(group => {
-                                group.classList.remove('valid', 'error');
-                            });
-                            form.querySelectorAll('.error-message, .success-message').forEach(msg => {
-                                msg.remove();
-                            });
-                            
-                            updateProgress();
                         }, 3000);
-                        
-                    }, 2000);
+                    });
                 } else {
                     // Shake button if form is invalid
                     this.style.animation = 'shake 0.5s ease-in-out';

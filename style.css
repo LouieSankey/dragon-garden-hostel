@@ -853,6 +853,20 @@ footer p {
         grid-template-columns: 1fr;
     }
     
+    /* Mobile-optimized form inputs */
+    .validation-form input,
+    .validation-form select,
+    .validation-form textarea {
+        padding: 12px 16px;
+        font-size: 0.95rem;
+    }
+    
+    .validation-form select {
+        padding-right: 40px;
+        background-size: 14px;
+        background-position: right 12px center;
+    }
+    
     .top-brand {
         top: 20px;
         left: 20px;
@@ -955,6 +969,20 @@ footer p {
     
     .interest-form {
         padding: 50px 10px;
+    }
+    
+    /* Even more compact for small screens */
+    .validation-form input,
+    .validation-form select,
+    .validation-form textarea {
+        padding: 10px 14px;
+        font-size: 0.9rem;
+    }
+    
+    .validation-form select {
+        padding-right: 36px;
+        background-size: 12px;
+        background-position: right 10px center;
     }
     
     .featured-photos {
